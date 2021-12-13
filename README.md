@@ -6,8 +6,10 @@ The steps for Multisite are pretty similar, except that we need to trigger CRON 
 
 1. Disable WordPress CRON across the whole network in wp-config.php: 
 " define('DISABLE_WP_CRON', true); "
+
 2. We will trigger publishing on every site with the help of foreach loop.
-   download the php file and upload it in the same root directory, where you have your wp-config.php.
+   download the php file " mu-cron.php " and upload it in the same root directory, where you have your wp-config.php.
+   
 3. All that you need now, is just to add one single CRON job for your main blog/site on your server:   
 
 " wget -q -O - "http://yourdomain.com/mu-cron.php" > /dev/null 2>&1 " with your desired time interval. and replace yourdomain.com with your multisite network's main domain
