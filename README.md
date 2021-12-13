@@ -9,6 +9,7 @@ The steps for Multisite are pretty similar, except that we need to trigger CRON 
 
 2. We will trigger publishing on every site with the help of foreach loop.
    download the php file " mu-cron.php " and upload it in the same root directory, where you have your wp-config.php.
+   public_html > mu-cron/php
    
 3. All that you need now, is just to add one single CRON job for your main blog/site on your server:   
 
