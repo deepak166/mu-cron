@@ -12,15 +12,15 @@ The steps for Multisite are pretty similar, except that we need to trigger CRON 
    
 3. All that you need now, is just to add one single CRON job for your main blog/site on your server:   
 
-  *" wget -q -O - "http://yourdomain.com/mu-cron.php" > /dev/null 2>&1 "*
-with your desired time interval. and replace yourdomain.com with your multisite network's main domain
+  " wget -q -O - "http://yourdomain.com/mu-cron.php" > /dev/null 2>&1 "
+  *with your desired time interval. and replace yourdomain.com with your multisite network's main domain*
 
 That’s all! According to the specified recurrence (e.g. once a day or ex=very 5 mins) Unix CRON will hit
 mu-cron.php -> which will hit wp-cron.php on every blog in the network-> which will check if there are any tasks scheduled, and execute them.
 
 Thus you can use a single external cronjob to trigger every subsite in the network at once.
 
-thank you
+*thank you*
 
 
 
